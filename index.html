@@ -116,6 +116,67 @@
           max-width: 100%;
         }
       }
+      .insight-badge {
+        background: #ffe8c7;
+        color: #6f4e37;
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 0.35em 1.2em 0.35em 1em;
+        font-size: 1.07em;
+        box-shadow: 0 2px 10px #e8dac655;
+        transition: background 0.18s;
+      }
+      .insight-badge:hover {
+        background: #ffdb97;
+        color: #a45b21;
+      }
+      .insight-list-item {
+        background: #fcf5ee;
+        border-radius: 14px;
+        box-shadow: 0 1px 5px #dfcdb921;
+        min-height: 115px;
+        transition: box-shadow 0.2s;
+      }
+      .insight-list-item:hover {
+        box-shadow: 0 4px 16px #bca99633;
+        background: #fbe8d6;
+      }
+      @media (max-width: 600px) {
+        .insight-list-item {
+          min-height: unset;
+        }
+      }
+      .recommendation-item {
+        background: #fcf5ee;
+        border-radius: 14px;
+        box-shadow: 0 1px 6px #dfcdb930;
+        min-height: 100px;
+        transition: box-shadow 0.2s, background 0.2s;
+      }
+      .recommendation-item:hover {
+        box-shadow: 0 4px 16px #bca99633;
+        background: #fbe8d6;
+      }
+      .method-item {
+        background: #fcf5ee;
+        border-radius: 14px;
+        box-shadow: 0 1px 5px #dfcdb921;
+        transition: box-shadow 0.2s, background 0.2s;
+      }
+      .method-item:hover {
+        box-shadow: 0 4px 16px #bca99633;
+        background: #fbe8d6;
+      }
+      .skill-card {
+        background: #fcf5ee;
+        border-radius: 12px;
+        box-shadow: 0 1px 5px #dfcdb921;
+        transition: box-shadow 0.18s, background 0.18s;
+      }
+      .skill-card:hover {
+        box-shadow: 0 4px 16px #bca99633;
+        background: #ffe8c7;
+      }
     </style>
   </head>
   <body>
@@ -164,7 +225,7 @@
         class="card coffee-card p-4 mb-3"
         style="border-left: 6px solid #e0c5a1"
       >
-        <h2 class="section-title" style="margin-top: 0">Project Description</h2>
+        <h2 class="section-title" style="margin-top: 0">Project Overview</h2>
         <p>
           As part of the
           <strong>Study Australia Industry Experience Program (SAIEP)</strong>,
@@ -218,35 +279,105 @@
       <!-- Data Insight Skills -->
       <div class="card coffee-card p-4">
         <h2 class="section-title">Data Insight & Analytics Skills</h2>
-        <ul class="skills-list" style="list-style: none; padding-left: 15px">
-          <li>
-            <i class="bi bi-search me-2"></i>Market and competitor research
-          </li>
-          <li>
-            <i class="bi bi-journal-text me-2"></i>Desk research and synthesis
-            of industry data
-          </li>
-          <li>
-            <i class="bi bi-people me-2"></i>Customer segmentation & behavior
-            analysis (qualitative and business insights)
-          </li>
-          <li>
-            <i class="bi bi-lightbulb me-2"></i>Identifying actionable
-            recommendations for business growth
-          </li>
-          <li>
-            <i class="bi bi-chat-dots me-2"></i>Professional business writing
-            and client communication
-          </li>
-          <li>
-            <i class="bi bi-people-fill me-2"></i>Team collaboration and project
-            management
-          </li>
-          <li>
-            <i class="bi bi-bar-chart-line me-2"></i>Developing insights for
-            strategic decision-making
-          </li>
-        </ul>
+        <div class="row gy-3 gx-3">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-search"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Market & Competitor Research</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-journal-text"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Desk Research & Synthesis</span
+                >
+                <div class="small text-muted">Industry & business data</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-people"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Customer Segmentation</span
+                >
+                <div class="small text-muted">
+                  (Qualitative & business insights)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-lightbulb"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Actionable Recommendations</span
+                >
+                <div class="small text-muted">For business growth</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-chat-dots"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Business Writing & Client Communication</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-people-fill"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Team Collaboration & Project Management</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="skill-card d-flex align-items-center gap-3 p-3 h-100">
+              <i
+                class="bi bi-bar-chart-line"
+                style="font-size: 1.6rem; color: #795548"
+              ></i>
+              <div>
+                <span class="fw-bold" style="color: #795548"
+                  >Strategic Insight Development</span
+                >
+                <div class="small text-muted">For decision-making</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- NEW: How I Turned Data into Business Impact -->
@@ -327,129 +458,315 @@
           </div>
         </div>
       </div>
-      <!-- Insights Uncovered -->
-      <div class="card coffee-card p-4">
-        <h2 class="section-title">Insights Uncovered</h2>
-        <div>
-          <span class="insight-badge">86% Loyalty</span>
-          <span class="insight-badge">Morning Traffic</span>
-          <span class="insight-badge">Rising Demand for Health Options</span>
-          <span class="insight-badge">Competitor Gaps</span>
-        </div>
-        <ul class="mt-3">
-          <li>
-            <b>Loyalty Drives Growth:</b> Over 86% of Georgie Boy’s customers
-            are repeat visitors, highlighting the power of a simple rewards
-            program and a sense of community.
-          </li>
-          <li>
-            <b>Peak Demand in Mornings:</b> Data showed the majority of sales
-            occur before 10AM, with gym-goers and commuters as top
-            segments—guiding menu and marketing focus.
-          </li>
-          <li>
-            <b>Rise in Health-Conscious Orders:</b> Customer data and national
-            trends both show growing demand for alternative milks, decaf coffee,
-            matcha, and smoothies. This reflects the opportunity to further
-            expand Georgie Boy’s health-focused drink menu and capture new
-            customer segments.
-          </li>
-          <li>
-            <b>Competitor Weaknesses:</b> Analysis revealed gaps in digital
-            ordering and loyalty at competing cafés, enabling Georgie Boy to win
-            market share by leading in these areas.
-          </li>
-        </ul>
-      </div>
-
-      <!-- Deliverables -->
-      <div class="card coffee-card p-4">
-        <h2 class="section-title">Project Deliverables</h2>
-        <div class="d-flex flex-wrap gap-3">
-          <a
-            class="btn btn-coffee px-4 py-2"
-            href="https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-Draft%20Report.pdf"
-            target="_blank"
-          >
-            📄 Draft Report
-          </a>
-          <a
-            class="btn btn-coffee px-4 py-2"
-            href="https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-%20Final%20Report.pdf"
-            target="_blank"
-          >
-            📄 Final Report
-          </a>
-        </div>
-        <ul class="mt-3 mb-0">
-          <li>
-            Draft Report: Initial research findings and proposed
-            recommendations.
-          </li>
-          <li>
-            Final Report: Comprehensive report with client feedback and refined
-            strategies.
-          </li>
-        </ul>
-      </div>
 
       <!-- Insights Uncovered -->
       <div class="card coffee-card p-4">
         <h2 class="section-title">Insights Uncovered</h2>
-        <div>
-          <span class="insight-badge">86% Loyalty</span>
-          <span class="insight-badge">Morning Traffic</span>
-          <span class="insight-badge">Rising Demand for Health Options</span>
-          <span class="insight-badge">Competitor Gaps</span>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <div class="insight-badge shadow-sm d-flex align-items-center gap-2">
+            <i
+              class="bi bi-person-heart"
+              style="color: #a45b21; font-size: 1.15em"
+            ></i>
+            86% Loyalty
+          </div>
+          <div class="insight-badge shadow-sm d-flex align-items-center gap-2">
+            <i
+              class="bi bi-clock-history"
+              style="color: #a45b21; font-size: 1.15em"
+            ></i>
+            Morning Traffic
+          </div>
+          <div class="insight-badge shadow-sm d-flex align-items-center gap-2">
+            <i
+              class="bi bi-cup-straw"
+              style="color: #a45b21; font-size: 1.15em"
+            ></i>
+            Health Options Rising
+          </div>
+          <div class="insight-badge shadow-sm d-flex align-items-center gap-2">
+            <i
+              class="bi bi-graph-up-arrow"
+              style="color: #a45b21; font-size: 1.15em"
+            ></i>
+            Competitor Gaps
+          </div>
         </div>
-        <ul class="mt-3">
-          <li>
-            <b>Loyalty Drives Growth:</b> Over 86% of Georgie Boy’s customers
-            are repeat visitors, highlighting the power of a simple rewards
-            program and a sense of community.
-          </li>
-          <li>
-            <b>Peak Demand in Mornings:</b> Data showed the majority of sales
-            occur before 10AM, with gym-goers and commuters as top
-            segments—guiding menu and marketing focus.
-          </li>
-          <li>
-            <b>Rise in Health-Conscious Orders:</b> Customer data and national
-            trends both show growing demand for alternative milks, decaf coffee,
-            matcha, and smoothies. This reflects the opportunity to further
-            expand Georgie Boy’s health-focused drink menu and capture new
-            customer segments.
-          </li>
-          <li>
-            <b>Competitor Weaknesses:</b> Analysis revealed gaps in digital
-            ordering and loyalty at competing cafés, enabling Georgie Boy to win
-            market share by leading in these areas.
-          </li>
-        </ul>
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="insight-list-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-person-heart me-2"></i>Loyalty Drives Growth
+              </div>
+              <div class="text-muted small">
+                Over 86% of Georgie Boy’s customers are repeat visitors,
+                highlighting the power of a simple rewards program and a sense
+                of community.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="insight-list-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-clock-history me-2"></i>Peak Demand in Mornings
+              </div>
+              <div class="text-muted small">
+                The majority of sales occur before 10AM, with gym-goers and
+                commuters as top segments—guiding menu and marketing focus.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="insight-list-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-cup-straw me-2"></i>Rise in Health-Conscious
+                Orders
+              </div>
+              <div class="text-muted small">
+                Customer data and national trends both show growing demand for
+                alternative milks, decaf, matcha, and smoothies—an opportunity
+                to expand the health-focused menu and capture new segments.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="insight-list-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-graph-up-arrow me-2"></i>Competitor Weaknesses
+              </div>
+              <div class="text-muted small">
+                Gaps in digital ordering and loyalty at competing cafés enable
+                Georgie Boy to win market share by leading in these areas.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- NEW: Analytical Tools & Methods -->
       <div class="card coffee-card p-4">
         <h2 class="section-title">Analytical Tools & Methods</h2>
-        <ul style="list-style: none; padding-left: 0">
-          <li>
-            <i class="bi bi-bar-chart-line me-2"></i> Competitor Benchmarking
-            (menu, pricing, customer experience)
-          </li>
-          <li><i class="bi bi-diagram-3 me-2"></i> SWOT Analysis</li>
-          <li>
-            <i class="bi bi-people me-2"></i> Customer Segmentation & Persona
-            Mapping
-          </li>
-          <li>
-            <i class="bi bi-lightbulb me-2"></i> Insight Synthesis &
-            Storytelling
-          </li>
-          <li>
-            <i class="bi bi-list-task me-2"></i> Actionable Recommendation
-            Prioritization
-          </li>
-        </ul>
+        <div class="row gy-4">
+          <div class="col-12 col-md-6">
+            <div class="method-item p-3 h-100 d-flex align-items-center gap-3">
+              <i
+                class="bi bi-bar-chart-line"
+                style="font-size: 2rem; color: #a45b21"
+              ></i>
+              <div>
+                <div class="fw-bold" style="color: #795548">
+                  Competitor Benchmarking
+                </div>
+                <div class="small text-muted">
+                  Menu, pricing, customer experience
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="method-item p-3 h-100 d-flex align-items-center gap-3">
+              <i
+                class="bi bi-diagram-3"
+                style="font-size: 2rem; color: #a45b21"
+              ></i>
+              <div>
+                <div class="fw-bold" style="color: #795548">SWOT Analysis</div>
+                <div class="small text-muted">
+                  Strengths, weaknesses, opportunities, threats
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="method-item p-3 h-100 d-flex align-items-center gap-3">
+              <i
+                class="bi bi-people"
+                style="font-size: 2rem; color: #a45b21"
+              ></i>
+              <div>
+                <div class="fw-bold" style="color: #795548">
+                  Customer Segmentation & Persona Mapping
+                </div>
+                <div class="small text-muted">
+                  Targeting strategies and user profiling
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="method-item p-3 h-100 d-flex align-items-center gap-3">
+              <i
+                class="bi bi-lightbulb"
+                style="font-size: 2rem; color: #a45b21"
+              ></i>
+              <div>
+                <div class="fw-bold" style="color: #795548">
+                  Insight Synthesis & Storytelling
+                </div>
+                <div class="small text-muted">
+                  Turning research into clear business insights
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="method-item p-3 h-100 d-flex align-items-center gap-3">
+              <i
+                class="bi bi-list-task"
+                style="font-size: 2rem; color: #a45b21"
+              ></i>
+              <div>
+                <div class="fw-bold" style="color: #795548">
+                  Actionable Recommendation Prioritization
+                </div>
+                <div class="small text-muted">
+                  Ranking solutions by impact and feasibility
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Recommendations -->
+      <div class="card coffee-card p-4">
+        <h2 class="section-title">Key Recommendations</h2>
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="recommendation-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-globe2 me-2"></i>Digital & Social Media
+              </div>
+              <div class="text-muted small">
+                Enhanced online ordering, stronger digital presence, consistent
+                social media engagement.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="recommendation-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-emoji-smile me-2"></i>Customer Experience
+              </div>
+              <div class="text-muted small">
+                Improved loyalty program with tailored perks,
+                family/pet-friendly features, targeted promotions.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="recommendation-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-cup-straw me-2"></i>Menu Innovation
+              </div>
+              <div class="text-muted small">
+                Introduced health-focused and seasonal offerings.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="recommendation-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-people-fill me-2"></i>Partnerships & Community
+              </div>
+              <div class="text-muted small">
+                Collaboration with local gyms, community events, charity
+                support.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="recommendation-item p-3 h-100">
+              <div class="fw-bold mb-1" style="color: #795548">
+                <i class="bi bi-gear-wide-connected me-2"></i>Operational
+                Excellence
+              </div>
+              <div class="text-muted small">
+                Streamlined workflows with automation while maintaining premium
+                quality.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project Deliverables -->
+      <div class="card coffee-card p-4">
+        <h2 class="section-title">Project Deliverables</h2>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-stretch gap-4 mt-3"
+        >
+          <!-- Draft Report Card -->
+          <div style="flex: 1; min-width: 210px; max-width: 260px">
+            <div
+              class="text-center p-3 h-100 d-flex flex-column justify-content-between"
+              style="
+                background: #efe6de;
+                border-radius: 18px;
+                box-shadow: 0 2px 10px #bca99619;
+                height: 100%;
+              "
+            >
+              <div>
+                <i
+                  class="bi bi-file-earmark-text"
+                  style="font-size: 2.2rem; color: #795548"
+                ></i>
+                <div
+                  class="fw-bold mt-2 mb-1"
+                  style="color: #5d4037; font-size: 1.1em"
+                >
+                  Draft Report
+                </div>
+                <div class="small mb-3" style="color: #4e342e">
+                  Initial research findings and proposed recommendations.
+                </div>
+              </div>
+              <a
+                href="https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-Draft%20Report.pdf"
+                target="_blank"
+                class="btn btn-coffee px-3 py-2 mt-2"
+              >
+                <i class="bi bi-eye me-1"></i> View Report
+              </a>
+            </div>
+          </div>
+          <!-- Final Report Card -->
+          <div style="flex: 1; min-width: 210px; max-width: 260px">
+            <div
+              class="text-center p-3 h-100 d-flex flex-column justify-content-between"
+              style="
+                background: #efe6de;
+                border-radius: 18px;
+                box-shadow: 0 2px 10px #bca99619;
+                height: 100%;
+              "
+            >
+              <div>
+                <i
+                  class="bi bi-file-earmark-check"
+                  style="font-size: 2.2rem; color: #795548"
+                ></i>
+                <div
+                  class="fw-bold mt-2 mb-1"
+                  style="color: #5d4037; font-size: 1.1em"
+                >
+                  Final Report
+                </div>
+                <div class="small mb-3" style="color: #4e342e">
+                  Comprehensive report with client feedback and refined
+                  strategies.
+                </div>
+              </div>
+              <a
+                href="https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-%20Final%20Report.pdf"
+                target="_blank"
+                class="btn btn-coffee px-3 py-2 mt-2"
+              >
+                <i class="bi bi-eye me-1"></i> View Report
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Client Feedback -->
       <div class="coffee-card p-4">
@@ -465,33 +782,6 @@
         </div>
       </div>
 
-      <!-- Key Insights -->
-      <div class="card coffee-card p-4">
-        <h2 class="section-title">Key Recommendations</h2>
-        <ul>
-          <li>
-            <b>Digital & Social Media:</b> Enhanced online ordering, stronger
-            digital presence, consistent social media engagement.
-          </li>
-          <li>
-            <b>Customer Experience:</b> Improved loyalty program with tailored
-            perks, family/pet-friendly features, targeted promotions.
-          </li>
-          <li>
-            <b>Menu Innovation:</b> Introduced health-focused and seasonal
-            offerings.
-          </li>
-          <li>
-            <b>Partnerships & Community:</b> Collaboration with local gyms,
-            community events, charity support.
-          </li>
-          <li>
-            <b>Operational Excellence:</b> Streamlined workflows with automation
-            while maintaining premium quality.
-          </li>
-        </ul>
-      </div>
-
       <!-- About -->
       <div class="card coffee-card p-4">
         <h2 class="section-title">About the Program</h2>
@@ -504,6 +794,26 @@
           <b>Team role:</b> Industry research, client interviews, data analysis,
           reporting, and presentation.
         </p>
+      </div>
+      <div class="card coffee-card p-4 mb-3 text-center">
+        <h2 class="section-title">See More On LinkedIn</h2>
+        <p class="mb-3">
+          I shared a summary, insights, and visual outcomes of this project on
+          LinkedIn.<br />
+          <span class="text-muted small"
+            >Join the conversation or connect with me for more project
+            details!</span
+          >
+        </p>
+        <a
+          href="https://www.linkedin.com/posts/chonnikarnyuth_saiep-industryexperienceprogram-practera-activity-7320677679660236802-242f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9gWHIBAMBUta4BM-Gebyb5YY1XJ8SzgyE"
+          target="_blank"
+          class="btn btn-coffee px-4 py-2 mb-2"
+          style="font-size: 1.1em"
+        >
+          <i class="bi bi-linkedin me-1" style="font-size: 1.2em"></i>
+          See on LinkedIn
+        </a>
       </div>
     </div>
 
