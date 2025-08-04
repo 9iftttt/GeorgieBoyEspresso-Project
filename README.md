@@ -18,9 +18,9 @@ This repository showcases the industry consulting project completed for Georgie 
 ---
 
 ## 🛠️ Project Deliverables
-- [**Draft Report**](docs/GeorgieBoy_Project_Draft_Report.pdf): Initial research findings and proposed recommendations.
-- [**Final Report**](docs/GeorgieBoy_Project_Final_Report.pdf): Comprehensive report incorporating client feedback and refined strategic recommendations.
-
+- [**Draft Report**](https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-Draft%20Report.pdf): Initial research findings and proposed recommendations.
+- [**Final Report**](https://github.com/9iftttt/GeorgieBoyEspresso-Project/blob/main/GeorgieBoy%20Project-%20Final%20Report.pdf): Comprehensive report incorporating client feedback and refined strategic recommendations.
+  
 ---
 
 ## 📈 Key Insights & Recommendations
