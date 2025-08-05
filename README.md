@@ -2,6 +2,9 @@
 
 **Consulting Project** | **Client:** Georgie Boy Espresso, Richmond, VIC | **Date:** April 2025  
 
+[![View Live Project Site – GitHub Pages](https://img.shields.io/badge/View_Live_Project-Click_here_-795548?style=for-the-badge&logo=github)](https://9iftttt.github.io/GeorgieBoyEspresso-Project/)
+
+
 ---
 
 ## 📌 Overview
